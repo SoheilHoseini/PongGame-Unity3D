@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Main : MonoBehaviour
 {
-    [SerializeField] float speed = 0.3f;
+    [SerializeField] float speed = 3f;
     [SerializeField] float movingAmount = 0.2f;
     [SerializeField] bool MainPlayer;
 
@@ -16,11 +16,11 @@ public class Main : MonoBehaviour
         {
             if(MainPlayer == true)
             {
-                gameObject.transform.Translate(0f, movingAmount * speed * Time.deltaTime, 0f);
+                gameObject.transform.Translate(0f, movingAmount * speed , 0f);
             }
             else
             {
-                gameObject.transform.Translate(0f, -1 * movingAmount * speed * Time.deltaTime, 0f);
+                gameObject.transform.Translate(0f, -1 * movingAmount * speed, 0f);
             }
         }
 
@@ -29,11 +29,11 @@ public class Main : MonoBehaviour
         {
             if (MainPlayer == true)
             {
-                gameObject.transform.Translate(0f, -1 * movingAmount * speed * Time.deltaTime, 0f);
+                gameObject.transform.Translate(0f, -1 * movingAmount * speed, 0f);
             }
             else
             {
-                gameObject.transform.Translate(0f, movingAmount * speed * Time.deltaTime, 0f);
+                gameObject.transform.Translate(0f, movingAmount * speed, 0f);
             }
         }
     }

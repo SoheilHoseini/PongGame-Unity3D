@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 136917048}
   - component: {fileID: 136917047}
   - component: {fileID: 136917046}
+  - component: {fileID: 136917050}
   m_Layer: 0
   m_Name: LowerWall
   m_TagString: Untagged
@@ -214,6 +215,22 @@ Transform:
   m_Father: {fileID: 2091256229}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &136917050
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 136917045}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &285245568
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,6 +243,7 @@ GameObject:
   - component: {fileID: 285245571}
   - component: {fileID: 285245570}
   - component: {fileID: 285245569}
+  - component: {fileID: 285245573}
   m_Layer: 0
   m_Name: UpperWall
   m_TagString: Untagged
@@ -307,6 +325,22 @@ Transform:
   m_Father: {fileID: 2091256229}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &285245573
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285245568}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!1 &485893834
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,6 +538,8 @@ GameObject:
   - component: {fileID: 786985409}
   - component: {fileID: 786985408}
   - component: {fileID: 786985407}
+  - component: {fileID: 786985411}
+  - component: {fileID: 786985412}
   m_Layer: 0
   m_Name: MainPlayer
   m_TagString: Untagged
@@ -585,6 +621,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &786985411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786985406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8ffadb4524f004a8a67d89b0d9fe61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  movingAmount: 0.2
+  MainPlayer: 1
+--- !u!54 &786985412
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 786985406}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -773,8 +840,9 @@ GameObject:
   - component: {fileID: 1651485448}
   - component: {fileID: 1651485447}
   - component: {fileID: 1651485446}
+  - component: {fileID: 1651485450}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -854,6 +922,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1651485450
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651485445}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1850484240
 GameObject:
   m_ObjectHideFlags: 0
@@ -866,6 +950,8 @@ GameObject:
   - component: {fileID: 1850484243}
   - component: {fileID: 1850484242}
   - component: {fileID: 1850484241}
+  - component: {fileID: 1850484245}
+  - component: {fileID: 1850484246}
   m_Layer: 0
   m_Name: SidePlayer
   m_TagString: Untagged
@@ -947,6 +1033,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850484245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850484240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe8ffadb4524f004a8a67d89b0d9fe61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0.3
+  movingAmount: 0.2
+  MainPlayer: 0
+--- !u!54 &1850484246
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1850484240}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &2091256228
 GameObject:
   m_ObjectHideFlags: 0

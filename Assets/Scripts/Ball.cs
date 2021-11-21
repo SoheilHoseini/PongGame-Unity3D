@@ -5,6 +5,9 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [SerializeField] int lifeCnt;
+    [SerializeField] float ballSpeed = 0.3f;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +23,13 @@ public class Ball : MonoBehaviour
         }
 
     }
-
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.CompareTag("Death"))
+        {
+            lifeCnt--;
+        }
+    }
     //When the player loses for 3 times, it is Game Over!
     void LoseProcess()
     {
